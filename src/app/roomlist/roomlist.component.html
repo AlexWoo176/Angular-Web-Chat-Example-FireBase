@@ -1,12 +1,18 @@
 <div class="example-container mat-elevation-z8">
-  <h3>{{nickname}} <button mat-flat-button (click)="logout()"><mat-icon>logout</mat-icon></button></h3>
+  <h3>{{nickname}}
+    <button mat-flat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </h3>
   <h2>Room List</h2>
   <div class="example-loading-shade"
        *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
   <div class="button-row">
-    <button mat-flat-button color="primary" [routerLink]="['/addroom']"><mat-icon>add</mat-icon></button>
+    <button mat-flat-button color="primary" [routerLink]="['/addroom']">
+      <mat-icon>add</mat-icon>
+    </button>
   </div>
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="rooms" class="example-table"
